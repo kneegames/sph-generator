@@ -124,7 +124,8 @@ def generate_sph():
                 f.write(html)
             
             # Convert HTML to PDF using weasyprint
-            HTML(string=html).write_pdf(target=temp_pdf_path)
+            with open(temp_pdf_path, "wb") as pdf_file:
+                HTML(string=html).write_pdf(pdf_file)
             
             # Generate filename
             filename = generate_sph_filename(nama_pt, tanggal_surat)
