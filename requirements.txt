@@ -1,2 +1,4 @@
 Flask==2.3.3
 docxtpl==0.16.4
+mammoth
+weasyprint==61.2
