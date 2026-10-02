@@ -1,8 +1,6 @@
 services:
-  - type: web
+  - type: docker
     name: sph-generator
-    env: python
-    buildCommand: apt-get update && apt-get install -y libreoffice libreoffice-common && pip install -r requirements.txt
-    startCommand: python sph_generator.py
+    dockerFilePath: ./Dockerfile
     plan: free
     autoDeploy: true
